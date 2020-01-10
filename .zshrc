@@ -113,8 +113,24 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# Julia
+export PATH=$PATH:"/Applications/Julia-1.2.app/Contents/Resources/julia/bin"
+
 # Pipenv Setting
 export PIPENV_VENV_IN_PROJECT="enabled"
+
+# Haskell (ghcup)
+export PATH=$PATH:"/Users/rlindsay/.ghcup/bin"
+
+# Stack
+export PATH=$PATH:"/Users/rlindsay/.local/bin"
+
+# Racket
+export PATH=$PATH:"/Applications/Racket v7.4/bin"
+
+# Rust and Cargo
+export PATH=$PATH:"/Users/rlindsay/.rustup/bin"
+export PATH=$PATH:"/Users/rlindsay/.cargo/bin"
 
 # Aliases
 alias keys="ls ~/.ssh/*.pub"
