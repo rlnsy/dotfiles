@@ -132,6 +132,9 @@ export PATH=$PATH:"/Applications/Racket v7.4/bin"
 export PATH=$PATH:"/Users/rlindsay/.rustup/bin"
 export PATH=$PATH:"/Users/rlindsay/.cargo/bin"
 
+# GCloud
+export PATH=$PATH:"/Users/rlindsay/google-cloud-sdk/bin"
+
 # Aliases
 alias keys="ls ~/.ssh/*.pub"
 alias pubkey="cat ~/.ssh/id_rsa.pub"
