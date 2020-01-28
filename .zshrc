@@ -132,8 +132,9 @@ export PATH=$PATH:"/Applications/Racket v7.4/bin"
 export PATH=$PATH:"/Users/rlindsay/.rustup/bin"
 export PATH=$PATH:"/Users/rlindsay/.cargo/bin"
 
-# GCloud
+# GCloud (Emma)
 export PATH=$PATH:"/Users/rlindsay/google-cloud-sdk/bin"
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/rlindsay/Space/dialogflow/Emma-d74a3f548d3a_dialog.json"
 
 # Aliases
 alias keys="ls ~/.ssh/*.pub"
