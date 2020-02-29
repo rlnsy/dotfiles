@@ -50,7 +50,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -149,6 +149,7 @@ alias webserver="python3 -m http.server"
 alias check="shasum -a 256"
 alias disks="diskutil list"
 alias unmount="diskutil unmountdisk"
+alias dg="python -m dg"
 
 #############
 # Functions #
@@ -184,6 +185,7 @@ rm-kernel () {
         jupyter kernelspec uninstall $1
 }
 
+
 #######################
 # Concerning CPSC 411 #
 #######################
@@ -197,6 +199,12 @@ function container () {
 	fi
 }
 
+# Clone a Github repository from the given sub-address using ugrad server token
+function token-clone() {
+	git clone "https://rowdl22:$2@github.students.cs.ubc.ca/$1"
+}
+
+
 #######################
 # Concerning CPSC 319 #
 #######################
@@ -207,10 +215,25 @@ export AWS_SECRET_ACCESS_KEY=/Qmbe/SXyVrNqyclWLSyxLhzfgWmWbqFZuMzcH0q
 
 # CDK Runner
 alias cdkr="./cdkrunner.sh" 
-
 alias ABORT="git reset --hard HEAD"
+alias penguins="cd /Users/rlindsay/Documents/School/19W2/CS319/voice-penguins"
 
-# Run Scripts at Login-Time
+
+#######################
+# Mac-Specific Stuff  #
+#######################
+
+# Brightness controls: require brightness package
+alias light="brightness 0.8"
+alias dark="brightness 0.5"
+alias black="brightness 0"
+alias blinding="brightness 1"
+
+
+#######################
+# Do Stuff At Runtime #
+#######################
+
 neofetch
 
 #"'There is a wide, yawning black infinity. In every direction, the extension is endless; the sensation of depth is overwhelming. And the darkness is immortal. Where light exists, it is pure, blazing, fierce; but light exists almost nowhere, and the blackness itself is also pure and blazing and fierce.' 💫"
