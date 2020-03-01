@@ -160,6 +160,12 @@ flash () {
 	sudo dd if=$1 of=$2 bs=2m
 }
 
+download () {
+	FILE=$1
+	cd ~/Downloads
+	wget "$FILE"
+}
+
 # Anaconda3 5.2.0
 export PATH="/Users/rlindsay/anaconda3/bin:$PATH"
 # . /Users/rlindsay/anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
