@@ -166,6 +166,13 @@ download () {
 	wget "$FILE"
 }
 
+zip () {
+	#TODO: use an actual compression format
+	INPUT=$1
+	OUTPUT=$2
+	tar cf "$OUTPUT" "$INPUT"
+}
+
 # Anaconda3 5.2.0
 export PATH="/Users/rlindsay/anaconda3/bin:$PATH"
 # . /Users/rlindsay/anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
