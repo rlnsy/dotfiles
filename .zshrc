@@ -223,6 +223,7 @@ export AWS_SECRET_ACCESS_KEY=/Qmbe/SXyVrNqyclWLSyxLhzfgWmWbqFZuMzcH0q
 alias cdkr="./cdkrunner.sh" 
 alias ABORT="git reset --hard HEAD"
 alias penguins="cd /Users/rlindsay/Documents/School/19W2/CS319/voice-penguins"
+alias branch-clean="git fetch --all --prune"
 
 
 #######################
