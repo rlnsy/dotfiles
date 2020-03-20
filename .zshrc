@@ -166,7 +166,7 @@ download () {
 	wget "$FILE"
 }
 
-zip () {
+myzip () {
 	#TODO: use an actual compression format
 	INPUT=$1
 	OUTPUT=$2
@@ -202,19 +202,35 @@ rm-kernel () {
 #######################
 # Concerning CPSC 411 #
 #######################
+
+export CURRENT_ASSIGNMENT="a8"
+
 alias build-docker="docker image build -t cs411 https://www.students.cs.ubc.ca/\~cs-411/2019w2/share/Dockerfile"
-alias run-docker="docker run -i -t -v /Users/rlindsay/Documents/School/19W2/CS411/workspace:/app/workspace -w /app/workspace cs411"
-function container () {
-	if [[ $1 == "411" ]]; then
-		docker run -i -t -v /Users/rlindsay/Documents/School/19W2/CS411/workspace:/app/workspace -w /app/workspace cs411
-	else
-		echo "Invalid container name"
-	fi
-}
 
 # Clone a Github repository from the given sub-address using ugrad server token
 function token-clone() {
 	git clone "https://rowdl22:$2@github.students.cs.ubc.ca/$1"
+}
+
+
+# initialize work environment
+RUN_MOUNT_CONTAINER="container"
+RUN_EDITOR="edit"
+function cs-411 () {
+	PROTOCOL=$1
+	echo "Selected $PROTOCOL"
+	if [[ $PROTOCOL == $RUN_MOUNT_CONTAINER ]]; then
+		echo "Creating imaged workspace in assignment $CURRENT_ASSIGNMENT..."
+		clear
+		echo "Welcome! You are currently mounted in $CURRENT_ASSIGNMENT"
+		docker run -i -t \
+                -v "/Users/rlindsay/Documents/School/19W2/CS411/workspace/411-assignments/$CURRENT_ASSIGNMENT:/app/workspace" \
+                -w /app/workspace cs411
+	elif [[ $PROTOCOL == $RUN_EDITOR ]]; then
+		cd "/Users/rlindsay/Documents/School/19W2/CS411/workspace/411-assignments/$CURRENT_ASSIGNMENT"
+		clear
+		#vim "$CURRENT_ASSIGNMENT.rkt"
+	fi
 }
 
 
