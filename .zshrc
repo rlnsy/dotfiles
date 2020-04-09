@@ -139,6 +139,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/Users/rlindsay/Space/dialogflow/Emma-d74
 ###########
 # Aliases #
 ###########
+alias reload="source $HOME/.zshrc"
 alias keys="ls ~/.ssh/*.pub"
 alias pubkey="cat ~/.ssh/id_rsa.pub"
 alias nyan="open software/touch_bar_nyancat/touchbar_nyancat.app"
@@ -150,6 +151,7 @@ alias check="shasum -a 256"
 alias disks="diskutil list"
 alias unmount="diskutil unmountdisk"
 alias dg="python -m dg"
+alias paste="pbpaste"
 
 #############
 # Functions #
@@ -171,6 +173,10 @@ myzip () {
 	INPUT=$1
 	OUTPUT=$2
 	tar cf "$OUTPUT" "$INPUT"
+}
+
+copy () {
+	echo $1 | pbcopy
 }
 
 # Anaconda3 5.2.0
@@ -198,12 +204,27 @@ rm-kernel () {
         jupyter kernelspec uninstall $1
 }
 
+#######################
+# SCHOOL STUFF YAY 🎒 #
+#######################
+
+cwl () {
+	PWD=$(lpass show --password ubc.ca)
+        if [[ $? != 0 ]]; then
+        	echo "Error getting credentials from LastPass"
+                return 1
+        fi
+        copy "$PWD"
+}
+
+SCH_CUR_TERM="19W2"
+SCHOOL="$HOME/Documents/School/$SCH_CUR_TERM"
 
 #######################
 # Concerning CPSC 411 #
 #######################
 
-export CURRENT_ASSIGNMENT="a8"
+export CURRENT_ASSIGNMENT="a9"
 
 alias build-docker="docker image build -t cs411 https://www.students.cs.ubc.ca/\~cs-411/2019w2/share/Dockerfile"
 
@@ -214,39 +235,65 @@ function token-clone() {
 
 
 # initialize work environment
-RUN_MOUNT_CONTAINER="container"
-RUN_EDITOR="edit"
-function cs-411 () {
+ASSIGNMENTS="assignment"
+LECTURES="lectures"
+function cs411 () {
 	PROTOCOL=$1
 	echo "Selected $PROTOCOL"
-	if [[ $PROTOCOL == $RUN_MOUNT_CONTAINER ]]; then
-		echo "Creating imaged workspace in assignment $CURRENT_ASSIGNMENT..."
-		clear
-		echo "Welcome! You are currently mounted in $CURRENT_ASSIGNMENT"
-		docker run -i -t \
-                -v "/Users/rlindsay/Documents/School/19W2/CS411/workspace/411-assignments/$CURRENT_ASSIGNMENT:/app/workspace" \
-                -w /app/workspace cs411
-	elif [[ $PROTOCOL == $RUN_EDITOR ]]; then
-		cd "/Users/rlindsay/Documents/School/19W2/CS411/workspace/411-assignments/$CURRENT_ASSIGNMENT"
-		clear
-		#vim "$CURRENT_ASSIGNMENT.rkt"
+	if [[ $PROTOCOL == $ASSIGNMENTS ]]; then
+		if [[ $2 == "-i" ]]; then
+			echo "Creating imaged workspace in assignment $CURRENT_ASSIGNMENT..."
+			clear
+			echo "Welcome! You are currently mounted in $CURRENT_ASSIGNMENT"
+			docker run -i -t \
+                	-v "/Users/rlindsay/Documents/School/19W2/CS411/workspace/411-assignments/$CURRENT_ASSIGNMENT:/app/workspace" \
+                	-w /app/workspace cs411
+		else
+			cd "/Users/rlindsay/Documents/School/19W2/CS411/workspace/411-assignments/$CURRENT_ASSIGNMENT"
+			clear
+		fi
+	elif [[ $PROTOCOL == $LECTURES ]]; then
+		if [[ $2 == "-i" ]]; then
+			echo "Creating imaged workspace in lecture collection"
+			clear
+			echo "Welcome to the lecture collection! Don't have too much fun"
+			docker run -i -t \
+                	-v "$SCHOOL/CS411/workspace/L:/app/lectures" \
+			-w /app/lectures cs411
+		else
+			cd "$SCHOOL/CS411/workspace/L"
+			clear
+		fi
 	fi
 }
 
+alias ronald="cs411 $LECTURES"
+alias william="cs411 $ASSIGNMENTS"
 
 #######################
 # Concerning CPSC 319 #
 #######################
 
 # AWS CDK Deployment Credentials
-export AWS_ACCESS_KEY_ID=AKIA4THCPHLGUQ2SNMMO
-export AWS_SECRET_ACCESS_KEY=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
+CREDENTIALS_PATH="$HOME/Credentials" # TODO move this
+AWS_CREDENTIALS_PATH="$CREDENTIALS_PATH/AWS"
+AWS_CREDENTIALS_INSTALLATION="$HOME/.aws/credentials"
+CREDS="personal"
+source "$AWS_CREDENTIALS_PATH/$CREDS/credentials.sh"
 
 # CDK Runner
 alias cdkr="./cdkrunner.sh" 
 alias ABORT="git reset --hard HEAD"
 alias penguins="cd /Users/rlindsay/Documents/School/19W2/CS319/voice-penguins"
 alias branch-clean="git fetch --all --prune"
+
+
+#######################
+# Concerning CPSC 304 #
+#######################
+
+alias trains="cd $SCHOOL/CS304/trainsRUs"
+
 
 
 #######################
