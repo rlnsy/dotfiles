@@ -1,5 +1,5 @@
-#!/bin/sh
-
+#!/bin/zsh
+source $SHELL_MODULES_SOURCE_DIR/shells.zsh && echo "shells"
 source $SHELL_MODULES_SOURCE_DIR/paths.sh && echo "paths"
 source $SHELL_MODULES_SOURCE_DIR/alias.sh && echo "aliases"
 source $SHELL_MODULES_SOURCE_DIR/brightness.sh && echo "brightness tools"

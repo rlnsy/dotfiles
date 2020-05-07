@@ -8,7 +8,13 @@ shell_mods_login() {
 
 printf "\nShell modules:\n"
 #echo "---------------------------------------------------------------------"
-source $SHELL_MODULES/smodc
+if [[ $SHELL == "/bin/zsh" ]]; then
+    source $SHELL_MODULES/modcnf.zsh
+elif [[ $SHELL == "/bin/bash" ]]; then
+    source $SHELL_MODULES/modcnf.bash
+elif [[ $SHELL == "/bin/sh" ]]; then
+    source $SHELL_MODULES/modcnf.sh
+fi
 #echo "---------------------------------------------------------------------"
 
-source $SHELL_MODULES/shmrc
+source $SHELL_MODULES/post-load.sh

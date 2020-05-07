@@ -16,4 +16,4 @@ alias regex="open \"$HOME/regex.md\""
 alias hosts="cat $HOME/.ssh/config"
 alias run="./run.sh"
 alias run-test="./test.sh"
-
+alias restore-zsh="chsh -s /bin/zsh"
