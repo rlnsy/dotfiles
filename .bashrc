@@ -1,6 +1,3 @@
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
+export SHELL_MODULES=".sh_modules"
 
-eval $(thefuck --alias)
+source $SHELL_MODULES/shell-modules.sh
