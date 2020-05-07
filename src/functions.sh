@@ -1,5 +1,15 @@
 #!/bin/sh
 
+config () {
+    if [[ $SHELL == "/bin/zsh" ]]; then
+        vim "$HOME/.zshrc"
+    elif [[ $SHELL == "/bin/bash" ]]; then
+        vim "$HOME/.bashrc"
+    elif [[ $SHELL == "/bin/sh" ]]; then
+        vim "$HOME/.profile"
+    fi
+}
+
 # flash image to disk using dd
 flash () {
 	sudo dd if=$1 of=$2 bs=2m
