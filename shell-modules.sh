@@ -8,6 +8,7 @@ shell_mods_login() {
 
 printf "\nShell modules:\n"
 #echo "---------------------------------------------------------------------"
+# TODO: these don't work in non-login shell
 if [[ $SHELL == "/bin/zsh" ]]; then
     source $SHELL_MODULES/modcnf.zsh
 elif [[ $SHELL == "/bin/bash" ]]; then
