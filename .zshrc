@@ -94,4 +94,5 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 #
 
-source .bashrc
+export SHELL_MODULES="$HOME/.sh_modules"
+source $SHELL_MODULES/shell-modules.sh
