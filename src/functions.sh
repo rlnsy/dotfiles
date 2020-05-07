@@ -37,3 +37,11 @@ alias kernels="jupyter kernelspec list"
 rm-kernel () {
         jupyter kernelspec uninstall $1
 }
+
+mkalias () {
+    vim "$SHELL_MODULES_SOURCE_DIR/alias.sh"
+}
+
+mkpath () {
+    vim "$SHELL_MODULES_SOURCE_DIR/paths.sh"
+}
