@@ -14,6 +14,8 @@ elif [[ $SHELL == "/bin/bash" ]]; then
     source $SHELL_MODULES/modcnf.bash
 elif [[ $SHELL == "/bin/sh" ]]; then
     source $SHELL_MODULES/modcnf.sh
+else
+    echo "ERROR: unrecognized shell; modules not loaded"
 fi
 #echo "---------------------------------------------------------------------"
 
