@@ -21,4 +21,6 @@ alias modules="cd $HOME/.sh_modules"
 alias fonts="ls $HOME/Library/Fonts"
 alias sw="telnet towel.blinkenlights.nl"
 alias python="python3"
+alias pip="pip3"
+alias nb="jupyter-notebook"
 
