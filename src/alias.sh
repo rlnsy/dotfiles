@@ -19,3 +19,5 @@ alias run-test="./test.sh"
 alias restore-zsh="chsh -s /bin/zsh"
 alias modules="cd $HOME/.sh_modules"
 alias fonts="ls $HOME/Library/Fonts"
+alias sw="telnet towel.blinkenlights.nl"
+
