@@ -6,6 +6,8 @@ shell_mods_login() {
 	printf "\nWelcome!\n"
 }
 
+source "$SHELL_MODULES/modload.sh"
+
 printf "\nShell modules:\n"
 #echo "---------------------------------------------------------------------"
 # TODO: these don't work in non-login shell
