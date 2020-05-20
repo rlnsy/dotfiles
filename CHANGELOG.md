@@ -1,3 +1,9 @@
+## 1.0.2 (2020-05-19)
+
+#### :wrench: Dev Tools
+- Created aliases for common scripts
+
+
 ## 1.0.1 (2020-05-9)
 
 First update.
