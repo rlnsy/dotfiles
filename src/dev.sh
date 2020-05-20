@@ -14,4 +14,5 @@ alias run="./scripts/run.sh"
 alias run-test="./scripts/test.sh"
 alias build="./scripts/build.sh"
 alias clean="./scripts/clean.sh"
+alias bundle="./scripts/bundle.sh"
 
