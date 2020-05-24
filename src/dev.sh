@@ -15,4 +15,4 @@ alias run-test="./scripts/test.sh"
 alias build="./scripts/build.sh"
 alias clean="./scripts/clean.sh"
 alias bundle="./scripts/bundle.sh"
-
+alias docky="docker-compose down && docker-compose up --build"

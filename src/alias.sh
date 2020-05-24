@@ -22,4 +22,4 @@ alias python="python3"
 alias pip="pip3"
 alias nb="jupyter-notebook"
 alias lab="jupyter lab"
-
+alias back="cd .."
