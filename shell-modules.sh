@@ -11,7 +11,7 @@ source "$SHELL_MODULES/modload.sh"
 printf "\nShell modules:\n"
 #echo "---------------------------------------------------------------------"
 # TODO: these don't work in non-login shell
-if [[ $SHELL == "/bin/zsh" ]]; then
+if [[ $SHELL == "/usr/bin/zsh" ]]; then
     source $SHELL_MODULES/modcnf.zsh
 elif [[ $SHELL == "/bin/bash" ]]; then
     source $SHELL_MODULES/modcnf.bash
