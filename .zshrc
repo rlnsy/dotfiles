@@ -12,10 +12,10 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-if [[ $TERM == "xterm-color" ]]; then
-    ZSH_THEME="robbyrussel"
-else
+if [[ $TERM == "xterm-256color" ]]; then
     ZSH_THEME="powerlevel10k/powerlevel10k"
+else
+    ZSH_THEME="evan"
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -98,5 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 #
 
-export SHELL_MODULES="$HOME/.sh_modules"
-source $SHELL_MODULES/shell-modules.sh
+if [[ $TERM != "xterm-16color"  ]];then
+	export SHELL_MODULES="$HOME/.sh_modules"
+	source $SHELL_MODULES/shell-modules.sh
+fi
