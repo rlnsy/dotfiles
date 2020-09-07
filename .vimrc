@@ -21,8 +21,6 @@ Plugin 'preservim/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
-Plugin 'JuliaEditorSupport/julia-vim'
-Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -35,12 +33,16 @@ let g:SimpylFold_docstring_preview=1 " show docstrings
 
 au BufNewFile,BufRead *.py set tabstop=4 | set softtabstop=4 | set shiftwidth=4 | set textwidth=79 | set expandtab | set autoindent | set fileformat=unix
 
-highlight BadWhitespace ctermbg=red guibg=red
+highlight BadWhitespace ctermbg=grey guibg=grey
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
 " End
 
+
+Plugin 'JuliaEditorSupport/julia-vim'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'wakatime/vim-wakatime'
 
 inoremap jj <esc>
 inoremap jk <esc>

@@ -94,5 +94,19 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 #
 
+# ZGEN
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
+
+# if the init script doesn't exist
+if ! zgen saved; then
+
+  # specify plugins here
+  zgen load sobolevn/wakatime-zsh-plugin	
+
+  # generate the init script from plugins above
+  zgen save
+fi
+
 export SHELL_MODULES="$HOME/.sh_modules"
 source $SHELL_MODULES/shell-modules.sh
