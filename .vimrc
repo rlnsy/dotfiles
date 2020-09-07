@@ -57,3 +57,10 @@ nmap <CR> o<Esc>
 set number
 "set expandtab
 set tabstop=4
+
+nmap <F2> :NERDTree<CR> 
+
+nmap q :q<CR>
+xmap q :q<CR>
+
+
