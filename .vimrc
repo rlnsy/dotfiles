@@ -20,7 +20,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+" Requires vim 8.1+, which is not yet available via pkg manager
+" Bundle 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
