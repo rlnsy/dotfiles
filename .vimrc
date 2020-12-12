@@ -21,9 +21,12 @@ Plugin 'preservim/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'dense-analysis/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
+
 filetype plugin indent on
 
 " Enable folding
@@ -63,4 +66,6 @@ nmap <F2> :NERDTree<CR>
 nmap q :q<CR>
 xmap q :q<CR>
 
+let g:ale_fixers = ['eslint']
+let g:ale_fix_on_save = 0
 
