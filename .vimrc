@@ -23,6 +23,9 @@ Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'dense-analysis/ale'
+Plugin 'preservim/nerdcommenter'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -65,6 +68,11 @@ nmap <F2> :NERDTree<CR>
 
 nmap q :q<CR>
 xmap q :q<CR>
+
+
+nmap ff :FZF<CR> 
+nmap rr :Rg<CR> 
+
 
 let g:ale_fixers = ['eslint']
 let g:ale_fix_on_save = 0

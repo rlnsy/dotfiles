@@ -48,7 +48,15 @@ fi
       status                  # exit code of the last command
       command_execution_time  # duration of the last command
       background_jobs         # presence of background jobs
-      virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
+      context                 # user@host
+      nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
+	  public_ip             # public IP address
+      # =========================[ Line #2 ]=========================
+      newline
+      # battery               # internal battery
+      # time                  # current time
+      # example               # example user-defined segment (see prompt_example function below)
+	  virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
       anaconda                # conda environment (https://conda.io/)
       pyenv                   # python environment (https://github.com/pyenv/pyenv)
       nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
@@ -60,14 +68,6 @@ fi
       rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
       rvm                     # ruby version from rvm (https://rvm.io)
       kubecontext             # current kubernetes context (https://kubernetes.io/)
-      context                 # user@host
-      nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
-      # =========================[ Line #2 ]=========================
-      newline
-      # public_ip             # public IP address
-      # battery               # internal battery
-      # time                  # current time
-      # example               # example user-defined segment (see prompt_example function below)
   )
 
   # Basic style options that define the overall look of your prompt. You probably don't want to
