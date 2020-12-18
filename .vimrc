@@ -72,6 +72,7 @@ xmap q :q<CR>
 
 nmap ff :FZF<CR> 
 nmap rr :Rg<CR> 
+nmap tt :NERDTree<CR> 
 
 
 let g:ale_fixers = ['eslint']
