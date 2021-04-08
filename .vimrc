@@ -49,6 +49,7 @@ set encoding=utf-8
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'wakatime/vim-wakatime'
+Plugin 'fatih/vim-go'
 
 inoremap jj <esc>
 inoremap jk <esc>
