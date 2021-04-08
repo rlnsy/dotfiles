@@ -1,4 +1,5 @@
 *
+
 !.profile
 !.bashrc
 !.zshrc
@@ -8,3 +9,4 @@
 !.config_install.md
 !.terminal_configs
 !.gitconfig
+!.config/alacritty/alacritty.yml
