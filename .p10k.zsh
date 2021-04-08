@@ -31,7 +31,7 @@ fi
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
       # =========================[ Line #1 ]=========================
-      # os_icon               # os identifier
+      os_icon               # os identifier
       dir                     # current directory
       vcs                     # git status
       # =========================[ Line #2 ]=========================
@@ -50,20 +50,20 @@ fi
       background_jobs         # presence of background jobs
       context                 # user@host
       nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
-	  public_ip             # public IP address
+	  #public_ip             # public IP address
       # =========================[ Line #2 ]=========================
       newline
-      # battery               # internal battery
-      # time                  # current time
+      #battery               # internal battery
+      #time                  # current time
       # example               # example user-defined segment (see prompt_example function below)
 	  virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
-      anaconda                # conda environment (https://conda.io/)
-      pyenv                   # python environment (https://github.com/pyenv/pyenv)
-      nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
+      #anaconda                # conda environment (https://conda.io/)
+      #pyenv                   # python environment (https://github.com/pyenv/pyenv)
+      #nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
       nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
       nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-      # node_version          # node.js version
-      # go_version            # go version (https://golang.org)
+      node_version          # node.js version
+      go_version            # go version (https://golang.org)
       # rust_version          # rustc version (https://www.rust-lang.org)
       rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
       rvm                     # ruby version from rvm (https://rvm.io)
