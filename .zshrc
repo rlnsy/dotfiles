@@ -108,5 +108,5 @@ if ! zgen saved; then
   zgen save
 fi
 
-export SHELL_MODULES="$HOME/.sh_modules"
-source $SHELL_MODULES/shell-modules.sh
+#export SHELL_MODULES="$HOME/.sh_modules"
+#source $SHELL_MODULES/shell-modules.sh
