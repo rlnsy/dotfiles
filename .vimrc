@@ -20,7 +20,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe' Temporarily disabled, as I cannot compile for ARM
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'dense-analysis/ale'
 Plugin 'preservim/nerdcommenter'
