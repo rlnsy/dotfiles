@@ -117,3 +117,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Embedded Compilation
+export ZEPHYR_TOOLCHAIN_VARIANT="gnuarmemb"
+export GNUARMEMB_TOOLCHAIN_PATH="$HOME/Work/pancast/gcc-arm-none-eabi-10-2020-q4-major"
+
+# iTerm Integration
+source "$HOME/.iterm2_shell_integration.zsh"
