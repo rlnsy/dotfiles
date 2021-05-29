@@ -13,3 +13,5 @@ lg = !"git lg1"
 	smudge = git-lfs smudge -- %f
 [submodule]
 	recurse = true
+[pull]
+	rebase = false
